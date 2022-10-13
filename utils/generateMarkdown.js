@@ -16,7 +16,7 @@ function renderLicenseLink(data) {
     
     MIT License
 
-Copyright (c) [2022] [${data.user}]
+Copyright (c) [2022] [${data.license}]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -82,11 +82,9 @@ ${data.tests}
 
 ## Questions
 
-${data.questions}
-
 If you have any questions about this project, please contact me via the email or GitHub profile below.
 
-> Email: ${data.email}
+${data.questions}
 
 > GitHub: [${data.username}](https://github.com/${data.username})
 `}
