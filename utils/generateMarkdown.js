@@ -37,7 +37,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ` 
   }
-
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
@@ -91,4 +91,4 @@ If you have any questions about this project, please contact me via the email or
 > GitHub: [${data.username}](https://github.com/${data.username})
 `}
 
-module.exports = generateMarkdown};
+module.exports = {generateMarkdown}
