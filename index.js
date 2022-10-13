@@ -37,10 +37,20 @@ const questions = () => {
             message: 'What are your Test Instructions?',
         },
         {
-        type: 'checkbox',
-        message: 'Choose a license',
-        license: 'license',
-        choices: ['MIT', 'license 2', 'license 3', 'license 4'],
+            type: 'checkbox',
+            message: 'Choose a license',
+            license: 'license',
+            choices: ['MIT', 'license 2', 'license 3', 'license 4'],
+        },
+        {
+            type: 'input',
+            username: 'username',
+            message: 'Enter your GitHub username',
+        },
+        {
+            type: 'input',
+            questions: 'questions',
+            message: 'Enter your email address',
         }])
 
     .then((data) => {
@@ -57,14 +67,17 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
     questions()
         .then(input => {
             return generateMarkdown(input);
         })
         .then(markdown => {
-            console.log(err);
+            writeToFile('./dist/README.md', markdown);
         })
+        .catch(err => {
+            console.log(err);
+        })};
 
 // Function call to initialize app
 init();
